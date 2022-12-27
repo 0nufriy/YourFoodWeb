@@ -25,6 +25,11 @@ let stringsText = new LocalizedStrings({
  });
 
 const Order = ({authenticated, isAuthorizetion,langueState}) => {
+
+  if(!authenticated){
+    return <Navigate to= "/login"></Navigate>
+  }
+
   stringsText.setLanguage(langueState)
 
   const DataNow = new Date();
@@ -56,9 +61,7 @@ const Order = ({authenticated, isAuthorizetion,langueState}) => {
     
   }
 
-  if(!authenticated){
-    return <Navigate to= "/login"></Navigate>
-  }
+ 
   return (
     <div>
       

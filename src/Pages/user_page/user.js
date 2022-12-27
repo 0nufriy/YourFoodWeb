@@ -17,13 +17,14 @@ let stringsText = new LocalizedStrings({
   }
  });
 const User = ({authenticated, isAuthorizetion,langueState}) => {
+  if(!authenticated){
+    return <Navigate to= "/login"></Navigate>
+  }
   stringsText.setLanguage(langueState)
 
   const [RegisteModal, setModal] = React.useState(false)
  
-  if(!authenticated){
-    return <Navigate to= "/login"></Navigate>
-  }
+
   return (
     
     <div>

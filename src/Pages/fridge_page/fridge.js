@@ -21,6 +21,9 @@ let stringsText = new LocalizedStrings({
  });
 
 const Fridge = ({authenticated, isAuthorizetion,langueState}) => {
+  if(!authenticated){
+    return <Navigate to= "/login"></Navigate>
+  }
 
   stringsText.setLanguage(langueState)
 
@@ -30,9 +33,7 @@ const Fridge = ({authenticated, isAuthorizetion,langueState}) => {
   })
   const [modal, setModal] = React.useState(false)
   
-  if(!authenticated){
-    return <Navigate to= "/login"></Navigate>
-  }
+ 
   return (
     <div>
       <Menu authenticated={authenticated} isAuthorizetion={isAuthorizetion} indexActive={3} langueState = {langueState}></Menu>
