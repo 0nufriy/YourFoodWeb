@@ -1,7 +1,7 @@
 import React,{ useState } from 'react'
 import "./order.css"
 import Menu from '../component/Menu'
-
+import { Navigate} from 'react-router-dom'
 import Ordertable from './ordertable'
 
 import LocalizedStrings from 'react-localization';
@@ -26,9 +26,7 @@ let stringsText = new LocalizedStrings({
 
 const Order = ({authenticated, isAuthorizetion,langueState}) => {
 
-  if(!authenticated){
-    return <Navigate to= "/login"></Navigate>
-  }
+
 
   stringsText.setLanguage(langueState)
 
@@ -48,6 +46,10 @@ const Order = ({authenticated, isAuthorizetion,langueState}) => {
     To: formattedDate
   })
     
+  if(!authenticated){
+    return <Navigate to= "/login"></Navigate>
+  }
+
   function aplayfiltr(){
     
     setState({state,From: from.current.value, To: to.current.value})
@@ -65,7 +67,7 @@ const Order = ({authenticated, isAuthorizetion,langueState}) => {
   return (
     <div>
       
-      <Menu authenticated={authenticated} isAuthorizetion={isAuthorizetion} indexActive={1} langueState = {langueState}></Menu>
+      <Menu isAuthorizetion={isAuthorizetion} indexActive={1} langueState = {langueState}></Menu>
       
       <div className='upOrder'>
         <button name='createorder'onClick={createneworder}>{stringsText.Createbutton}</button>

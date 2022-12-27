@@ -3,6 +3,7 @@ import Menu from '../component/Menu'
 import UserTable from './userTable'
 import './user.css'
 import LocalizedStrings from 'react-localization';
+import { Navigate} from 'react-router-dom'
 
 
 import RegisterAdmin from './RegisterAdmin';
@@ -17,18 +18,20 @@ let stringsText = new LocalizedStrings({
   }
  });
 const User = ({authenticated, isAuthorizetion,langueState}) => {
-  if(!authenticated){
-    return <Navigate to= "/login"></Navigate>
-  }
+ 
   stringsText.setLanguage(langueState)
 
   const [RegisteModal, setModal] = React.useState(false)
- 
+
+
+  if(!authenticated){
+    return <Navigate to= "/login"></Navigate>
+  }
 
   return (
     
     <div>
-       <Menu authenticated={authenticated} isAuthorizetion={isAuthorizetion} indexActive={2} langueState = {langueState}></Menu>
+       <Menu isAuthorizetion={isAuthorizetion} indexActive={2} langueState = {langueState}></Menu>
        <div>
        <button name='registerAdmin' onClick={() =>{setModal(true)}}>{stringsText.Register}</button>
        </div>

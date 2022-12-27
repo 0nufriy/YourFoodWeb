@@ -18,7 +18,7 @@ let stringsText = new LocalizedStrings({
   }
  });
 
-const Menu = ({authenticated, isAuthorizetion, indexActive, langueState}) => {
+const Menu = ({isAuthorizetion, indexActive, langueState}) => {
   
     
     stringsText.setLanguage(langueState)

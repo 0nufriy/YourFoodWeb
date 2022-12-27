@@ -4,6 +4,7 @@ import FridgeTable from './FridgeTable'
 import NewFridge from './NewFridge'
 import './fridge.css'
 import LocalizedStrings from 'react-localization';
+import {Navigate} from 'react-router-dom'
 
 let stringsText = new LocalizedStrings({
   en:{
@@ -21,9 +22,7 @@ let stringsText = new LocalizedStrings({
  });
 
 const Fridge = ({authenticated, isAuthorizetion,langueState}) => {
-  if(!authenticated){
-    return <Navigate to= "/login"></Navigate>
-  }
+
 
   stringsText.setLanguage(langueState)
 
@@ -33,10 +32,12 @@ const Fridge = ({authenticated, isAuthorizetion,langueState}) => {
   })
   const [modal, setModal] = React.useState(false)
   
- 
+  if(!authenticated){
+    return <Navigate to= "/login"></Navigate>
+  }
   return (
     <div>
-      <Menu authenticated={authenticated} isAuthorizetion={isAuthorizetion} indexActive={3} langueState = {langueState}></Menu>
+      <Menu isAuthorizetion={isAuthorizetion} indexActive={3} langueState = {langueState}></Menu>
       <div className='FridgeUp'>
         <button name='newFridge' onClick={()=>{setModal(true)}}>{stringsText.AddButton}</button>
         <div style={{width: "50%"}}>
