@@ -1,0 +1,180 @@
+button[name = 'registerAdmin']{
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: #FF5A5A;
+    font-size: 20px;
+    font-family: 'Chakra Petch';
+    border-radius: 40px; 
+    border: 0px solid #000;
+    height: 100px;
+    width: 200px;
+    min-width: 110px;
+}
+button[name = 'registerAdmin']:hover{
+    background-color: #fc8585;
+}
+
+button[name = 'registerAdmin']:visited{
+    background-color: #fd4747;
+}
+
+button[name = 'registerAdmin']:active{
+    background-color: #fd4747;
+}
+/*регестрація*/
+.RegisterModal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.RegisterModalBorder{
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 800px;
+  min-width: 600px;
+  min-height: 400px;
+  background-color: #FFEDED;
+  border-radius: 80px;
+}
+  
+input[name = "registererror"]{
+    box-sizing: border-box;
+      border: 4px solid #FF5A5A;
+      border-radius: 10px; 
+      background: #EEEEEE !important; 
+      outline: none;
+      height: 48px;
+      width: 80%; 
+      color: #000; 
+      font-size: 29px;  
+      padding-left: 20px;
+}
+input[name = "register"]{
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 10px; 
+    background: #EEEEEE !important; 
+    outline: none;
+    height: 48px;
+    width: 80%; 
+    color: #000; 
+    font-size: 29px;  
+    padding-left: 20px;
+}
+.TextField{
+    text-align: center;
+}
+.TextFieldError{
+    text-align: center;
+}
+  
+.TextUpField{
+    margin-left: 12%;
+    margin-top: 20px;
+    font-size: 24px;
+    width: 75%;
+    font-family: 'Chakra Petch';
+}
+button[name = 'Register']{
+    margin-top: 10px;
+    background-color: #FF5A5A;
+    font-size: 40px;
+    font-family: 'Chakra Petch';
+    border-radius: 40px; 
+    border: 0px solid #000;
+    height: 60px;
+    width: 45%;
+}
+button[name = 'Register']:hover{
+    background-color: #fc8585;
+}
+
+button[name = 'Register']:visited{
+    background-color: #fd4747;
+}
+
+button[name = 'Register']:active{
+    background-color: #fd4747;
+}
+button[name = 'Cancel']{
+    margin-top: 10px;
+    background-color: #FFACAC;
+    font-size: 40px;
+    font-family: 'Chakra Petch';
+    border-radius: 40px; 
+    border: 0px solid #000;
+    height: 60px;
+    width: 45%;
+}
+button[name = 'Cancel']:hover{
+    background-color: #f8c2c2;
+}
+
+button[name = 'Cancel']:visited{
+    background-color: #fcb0b0;
+}
+
+button[name = 'Cancel']:active{
+    background-color: #fcb0b0;
+}
+.buttondiv{
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: flex-end;
+}
+
+/*таблиця*/
+table{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px; 
+    background-color: #000;
+    width: 98%;
+    border-style: hidden;
+    font-size: 20px;
+    
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+
+table tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+table tr:first-child th:last-child {
+    
+    border-top-right-radius: 10px;
+}
+
+
+th{
+    background-color: #EEEEEE;
+    padding-left: 2px;
+}
+td{
+    background-color: #FFF;
+    padding-left: 2px;
+}
