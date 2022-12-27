@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigate, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import "./Menu.css"
 
 import LocalizedStrings from 'react-localization';
@@ -28,7 +28,6 @@ const Menu = ({isAuthorizetion, indexActive, langueState}) => {
     }
     
     
-    
     return (
       <div>
         <div className='UpMenu'>
@@ -36,9 +35,9 @@ const Menu = ({isAuthorizetion, indexActive, langueState}) => {
             YourFood
           </div>
           <div className='buttons'>
-            <Link to={'/orders'}><button name = {indexActive == 1 ? 'Selected' :'Unselected'}>{stringsText.Orders} </button></Link>
-            <Link to={'/users'}><button name = {indexActive == 2 ? 'Selected' :'Unselected'}>{stringsText.Users} </button></Link>
-            <Link to= {'/fridges'}><button name = {indexActive == 3 ? 'Selected' :'Unselected'}>{stringsText.Fridges}</button></Link>   
+            <Link to={'/orders'}><button name = {indexActive === 1 ? 'Selected' :'Unselected'}>{stringsText.Orders} </button></Link>
+            <Link to={'/users'}><button name = {indexActive === 2 ? 'Selected' :'Unselected'}>{stringsText.Users} </button></Link>
+            <Link to= {'/fridges'}><button name = {indexActive === 3 ? 'Selected' :'Unselected'}>{stringsText.Fridges}</button></Link>   
           </div>
           <div className='exit'>
             <button name = "exit" onClick={unLogin}>{stringsText.Exit}</button>
