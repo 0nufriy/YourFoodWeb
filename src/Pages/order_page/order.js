@@ -56,6 +56,9 @@ const Order = ({authenticated, isAuthorizetion,langueState}) => {
     
   }
 
+  if(!authenticated){
+    return <Navigate to= "/login"></Navigate>
+  }
   return (
     <div>
       

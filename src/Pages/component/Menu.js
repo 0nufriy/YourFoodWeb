@@ -21,9 +21,6 @@ let stringsText = new LocalizedStrings({
 const Menu = ({authenticated, isAuthorizetion, indexActive, langueState}) => {
   
     
-    if(!authenticated){
-      return <Navigate to= "/login"></Navigate>
-    }
     stringsText.setLanguage(langueState)
   
     function unLogin(){

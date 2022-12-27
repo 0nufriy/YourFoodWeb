@@ -29,6 +29,10 @@ const Fridge = ({authenticated, isAuthorizetion,langueState}) => {
     adress: "",
   })
   const [modal, setModal] = React.useState(false)
+  
+  if(!authenticated){
+    return <Navigate to= "/login"></Navigate>
+  }
   return (
     <div>
       <Menu authenticated={authenticated} isAuthorizetion={isAuthorizetion} indexActive={3} langueState = {langueState}></Menu>

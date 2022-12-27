@@ -20,7 +20,12 @@ const User = ({authenticated, isAuthorizetion,langueState}) => {
   stringsText.setLanguage(langueState)
 
   const [RegisteModal, setModal] = React.useState(false)
+ 
+  if(!authenticated){
+    return <Navigate to= "/login"></Navigate>
+  }
   return (
+    
     <div>
        <Menu authenticated={authenticated} isAuthorizetion={isAuthorizetion} indexActive={2} langueState = {langueState}></Menu>
        <div>
